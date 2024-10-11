@@ -6,7 +6,7 @@ const cityTemp=document.getElementById("city-temp");
 const cityDay=document.getElementById("city-day");
 const weatherIcon = document.getElementById("weathericon");
 async function getData(cityName){
-    const promise=await fetch(`https://api.weatherapi.com/v1/current.json?key=dd6f61e301d846cca1d91130241805&q=bulandshahr&aqi=yes`);
+    const promise=await fetch(`http://api.weatherapi.com/v1/current.json?key=dd6f61e301d846cca1d91130241805&q=${cityName}&aqi=yes`);
 
 return await promise.json();
 }
